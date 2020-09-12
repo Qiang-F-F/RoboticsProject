@@ -96,7 +96,43 @@ $$
 \mathcal R&=\mathcal I+\sin{\theta}\vec a\times+(1-\cos{\theta})\vec a\times\vec a\times
 \end{aligned}
 $$
-And represent $\mathcal R$ in a frame, we have
+==And represent $\mathcal R$ in a frame, we have==
 $$
 R = I_3+\sin{\theta}a^\times+(1-\cos{\theta})(a^\times)^2
+$$
+This is called the __Euler-Rodrigues Formula__
+So intuitively we can see that ==if $\mathcal{E}_a=\mathcal R\mathcal{E}_o$, then $\mathcal R$ represented in both frames is $R(\vec a,\theta)$==, also we can prove this
+$$
+\begin{aligned}
+\mathcal{E}_a&=\mathcal R\mathcal{E}_o\\
+\mathcal{E}_o^*\mathcal{E}_a&=\mathcal{E}_o^*\mathcal R\mathcal{E}_o\\
+R_{oa}&=\mathcal{E}_o^*\mathcal R\mathcal{E}_o\\
+\mathcal{E}_a^*\mathcal{E}_o\mathcal{E}_o^*\mathcal{E}_a\mathcal{E}_o^*\mathcal{E}_a&=\mathcal{E}_a^*\mathcal{E}_o\mathcal{E}_o^*\mathcal R\mathcal{E}_o\mathcal{E}_o^*\mathcal{E}_a\\
+R_{ao}R_{oa}R_{oa}&=\mathcal{E}_a^*\mathcal R\mathcal{E}_a\\
+R_{oa}&=\mathcal{E}_a^*\mathcal R\mathcal{E}_a\\
+\end{aligned}
+$$
+
+## Consecutive Rotation
+Consecutive rotation about the same axis is additive
+$$
+\mathcal R(\vec a,\theta_1)\mathcal R(\vec a,\theta_2) = \mathcal R(\vec a,\theta_1+\theta_2)
+$$
+==Rotation about bodi axis, e.g.,rotation about $\vec x$ for $\theta_1$, then new $\vec y$ for $\theta_2$, then new $\vec z$ for $\theta_3$==
+$$
+\begin{aligned}
+\mathcal{E}_1 &= \mathcal R(\vec x_0,\theta_1)\mathcal{E}_0,\,\mathcal{E}_2 = \mathcal R(\vec y_1,\theta_2)\mathcal{E}_1,\,\mathcal{E}_A = \mathcal R(\vec z_2,\theta_3)\mathcal{E}_2\\
+\mathcal{E}_A &= \mathcal R(\vec z_2,\theta_3)\mathcal R(\vec y_1,\theta_2)\mathcal R(\vec x_0,\theta_1)\mathcal{E}_0\\
+\mathcal{E}_0^*\mathcal{E}_A&=\mathcal{E}_0^*\mathcal{E}_1\mathcal{E}_1^*\mathcal{E}_2\mathcal{E}_2^*\mathcal{E}_A\\
+R_{0A}&=R(e_x,\theta_1)R(e_y,\theta_2)R(e_z,\theta_3)\\
+e_x &= \begin{bmatrix}1&0&0\end{bmatrix}^T,\,e_y = \begin{bmatrix}0&1&0\end{bmatrix}^T,\,e_z = \begin{bmatrix}0&0&1\end{bmatrix}^T
+\end{aligned}
+$$
+==Rotation about fixed axis==
+$$
+\begin{aligned}
+\mathcal{E}_A &= \mathcal R(\vec z_0,\theta_3)\mathcal R(\vec y_0,\theta_2)\mathcal R(\vec x_0,\theta_1)\mathcal{E}_0\\
+\mathcal{E}_0^*\mathcal{E}_A &= \mathcal{E}_0^*\mathcal R(\vec z_0,\theta_3)\mathcal R(\vec y_0,\theta_2)\mathcal R(\vec x_0,\theta_1)\mathcal{E}_0\\
+R_{0A} &= R(e_z,\theta_3)R(e_y,\theta_2)R(e_x,\theta_1)
+\end{aligned}
 $$
