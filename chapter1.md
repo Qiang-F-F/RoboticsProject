@@ -31,7 +31,7 @@ $$
 $$
 p_a = \mathcal{E}_a^*(\mathcal{E}_b p_b)
 $$
-where $\mathcal{E}_a^*\mathcal{E}_b$ is always denoted as rotation matrix $R_{ab}$, ==further we can have==
+__where $\mathcal{E}_a^*\mathcal{E}_b$ is always denoted as rotation matrix $R_{ab}$__, ==further we can have==
 $$
 R_{ab}=\begin{bmatrix}\vec{x_a}\cdot\\\vec{y_a}\cdot\\\vec{z_a}\cdot\end{bmatrix}\begin{bmatrix}\vec{x_b}&\vec{y_b}&\vec{z_b}\end{bmatrix}=\begin{bmatrix}\vec{x_a}\cdot\vec{x_b}&\vec{x_a}\cdot\vec{y_b}&\vec{x_a}\cdot\vec{z_b}\\\vec{y_a}\cdot\vec{x_b}&\vec{y_a}\cdot\vec{y_b}&\vec{y_a}\cdot\vec{z_b}\\\vec{z_a}\cdot\vec{x_b}&\vec{z_a}\cdot\vec{y_b}&\vec{z_a}\cdot\vec{z_b}\end{bmatrix}
 $$
