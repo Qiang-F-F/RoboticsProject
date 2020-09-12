@@ -85,3 +85,18 @@ $$
 
 3. $R_{ab}$ is the representation of $\mathcal{E}_b$ in $\mathcal{E}_a$. 
 ## Euler-Rodrigues Formula
+__Q:__ Say we have a unit vector $\vec a$ and an angle $\theta$, so what is the $R$ that denotes a rotation along $\vec a$ with angle $\theta$?
+__A:__ Denote such rotation as $\mathcal R$, and the vector $\vec v$ after rotation is denoted as $\mathcal R\vec v$ 
+<img src="./assets/Chapter1-1.png" width="40%">
+We can directly see from the graph that
+$$
+\begin{aligned}
+\mathcal R\vec v&=\vec v+\vec a\times(\vec a\times\vec v)+\sin{\theta}\vec a\times\vec v-\cos{\theta}\vec a\times(\vec a\times\vec v)\\
+&\mathcal R\vec v=\vec v+\sin{\theta}\vec a\times \vec v+(1-\cos{\theta})\vec a\times(\vec a\times\vec v)\\
+\mathcal R&=\mathcal I+\sin{\theta}\vec a\times+(1-\cos{\theta})\vec a\times\vec a\times
+\end{aligned}
+$$
+And represent $\mathcal R$ in a frame, we have
+$$
+R = I_3+\sin{\theta}a^\times+(1-\cos{\theta})(a^\times)^2
+$$
